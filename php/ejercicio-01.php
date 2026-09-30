@@ -14,6 +14,8 @@ if ($totalSinDescuento > 50) {
     echo "¡Felicidades! Ganaste un descuento de $5 por comprar más de $50.<br>";
 }
 
+//hola mundo
+
 $totalPagar = $totalSinDescuento - $descuento;
 
 echo "--- TICKET DE VENTA ---<br>";
