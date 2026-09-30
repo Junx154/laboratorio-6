@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Inventario</title>
+    <style>
+        body { font-family: Arial; max-width: 700px; margin: 20px auto; }
+        input, button { padding: 6px; margin: 3px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 15px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background: #f0f0f0; }
+        .msg { padding: 8px; background: #e7f5e7; margin: 10px 0; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>📦 Sistema de Inventario</h1>
+
+    <div id="mensaje" class="msg" style="display:none"></div>
+
+    <h3>➕ Agregar producto</h3>
+    <input type="text"   id="nombre" placeholder="Nombre">
+    <input type="number" id="precio" placeholder="Precio" step="0.01">
+    <input type="number" id="stock"  placeholder="Stock" min="0">
+    <button onclick="agregar()">Agregar</button>
+
+    <h3>🔍 Buscar producto</h3>
+    <input type="text" id="buscar" placeholder="Nombre..." oninput="mostrar()">
+    <button onclick="limpiarBusqueda()">Limpiar</button>
+
+    <h3>📋 Lista de productos</h3>
+    <table>
+        <thead>
+            <tr><th>ID</th><th>Nombre</th><th>Precio</th><th>Stock</th><th>Acción</th></tr>
+        </thead>
+        <tbody id="tabla"></tbody>
+    </table>
+
+    <script src="js/ejercicio_1-adrian.js"></script>
+</body>
+</html>
